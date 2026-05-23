@@ -1,0 +1,152 @@
+<div style="
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    padding: 40px;
+    border-radius: 20px;
+    color: #e5e7eb;
+    max-width: 1400px;
+    margin: auto;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+">
+
+    <div style="
+        text-align: center;
+        margin-bottom: 30px;
+    ">
+        <h1 style="
+            margin: 0;
+            font-size: 2rem;
+            background: linear-gradient(90deg, #00f5ff, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        ">
+            📦 Structured Order Details
+        </h1>
+
+        <p style="
+            color: #94a3b8;
+            margin-top: 10px;
+            font-size: 1rem;
+        ">
+            Automatically extracted from WhatsApp conversation
+        </p>
+    </div>
+
+    <div style="
+        background: rgba(255,255,255,0.04);
+        padding: 25px;
+        border-radius: 16px;
+        border: 1px solid rgba(255,255,255,0.06);
+    ">
+
+        <p style="line-height: 1.8;">
+            Dear <strong>Order Processing Team</strong>,
+        </p>
+
+        <p style="line-height: 1.8; color: #cbd5e1;">
+            Please find below the structured order details extracted from the customer WhatsApp conversation for processing.
+        </p>
+
+        <!-- CUSTOMER -->
+        <div style="
+            margin-top: 30px;
+            padding: 18px;
+            background: rgba(0,245,255,0.06);
+            border-left: 4px solid #00f5ff;
+            border-radius: 12px;
+        ">
+            <h3 style="margin-top: 0; color: #00f5ff;">
+                👤 Customer Information
+            </h3>
+
+            <p><strong>Name:</strong> {{customer_name}}</p>
+            <p><strong>Phone Number:</strong> {{customer_phone}}</p>
+            <p><strong>Delivery Location:</strong> {{delivery_location}}</p>
+        </div>
+
+        <!-- ORDER ITEMS -->
+        <div style="
+            margin-top: 25px;
+            padding: 18px;
+            background: rgba(139,92,246,0.06);
+            border-left: 4px solid #8b5cf6;
+            border-radius: 12px;
+        ">
+            <h3 style="margin-top: 0; color: #c4b5fd;">
+                🛒 Order Items
+            </h3>
+
+            <div style="
+                margin-top: 15px;
+                padding-left: 10px;
+                line-height: 1.8;
+            ">
+                {{#each order_items}}
+                    <div style="
+                        padding: 10px 14px;
+                        margin-bottom: 10px;
+                        background: rgba(255,255,255,0.04);
+                        border-radius: 10px;
+                    ">
+                    </div>
+            </div>
+        </div>
+
+        <!-- ORDER DETAILS -->
+        <div style="
+            margin-top: 25px;
+            padding: 18px;
+            background: rgba(16,185,129,0.06);
+            border-left: 4px solid #10b981;
+            border-radius: 12px;
+        ">
+            <h3 style="margin-top: 0; color: #6ee7b7;">
+                📋 Order Details
+            </h3>
+
+            <p><strong>Delivery Date:</strong> {{delivery_date}}</p>
+            <p><strong>Payment Status:</strong> {{payment_status}}</p>
+            <p><strong>Priority Level:</strong> {{priority_level}}</p>
+        </div>
+
+        <!-- SPECIAL INSTRUCTIONS -->
+        <div style="
+            margin-top: 25px;
+            padding: 18px;
+            background: rgba(245,158,11,0.06);
+            border-left: 4px solid #f59e0b;
+            border-radius: 12px;
+        ">
+            <h3 style="margin-top: 0; color: #fcd34d;">
+                📝 Special Instructions
+            </h3>
+
+            <p style="
+                color: #d1d5db;
+                line-height: 1.8;
+            ">
+                {{special_instructions}}
+            </p>
+        </div>
+
+        <!-- FOOTER -->
+        <div style="
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            color: #94a3b8;
+        ">
+            <p>
+                Please review and process accordingly.
+            </p>
+
+            <p style="margin-top: 25px;">
+                Best Regards,<br>
+                <strong>Order Extraction System</strong><br>
+                "{{Date}}"
+            </p>
+        </div>
+
+    </div>
+</div>
