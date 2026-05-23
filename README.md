@@ -257,14 +257,8 @@ BizRise was built to reduce that operational friction by helping teams:
 ---
 
 # Screenshots
-
-Add screenshots here once available.
-
-Example:
-
-```md id="jlwm9d"
 ![Dashboard](assets/dashboard.png)
-```
+![Scam Page](assets/fraud_detection.png)
 
 ---
 
