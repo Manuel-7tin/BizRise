@@ -531,7 +531,7 @@ def landing_page():
     with col2:
         st.markdown("""
         <div class="glass-card">
-            <h2>🛡️ Fraud Shield AI</h2>
+            <h2>🛡️ Scam Detection System</h2>
             <p>
                 Detect suspicious messages, phishing attempts, and scam patterns before they become costly.
             </p>
@@ -655,7 +655,7 @@ def fraud_detection_page():
 
     st.markdown("""
     <div class="section-title">
-        🛡️ Fraud Shield AI
+        🛡️ Scam Detection System
     </div>
     """, unsafe_allow_html=True)
 
