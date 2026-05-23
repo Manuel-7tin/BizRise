@@ -132,7 +132,7 @@ pip install -r requirements.txt
 Create a `.env` file:
 
 ```env id="3cr2o4"
-PWORD=your_email_password
+PWORD=your_email_app_password
 GROQ_API_KEY=your_groq_api_key
 ```
 
@@ -153,7 +153,7 @@ streamlit run app.py
 ### Input
 
 ```text id="jlwmhf"
-Customer: Hi, I need 3 bags of rice and 2 cartons of noodles.
+Customer: Hi Chioma here, I need 3 bags of rice and 2 cartons of noodles.
 Customer: Please deliver tomorrow morning to Lekki.
 Customer: Payment has already been made.
 ```
@@ -161,23 +161,32 @@ Customer: Payment has already been made.
 ### Output
 
 ```json id="2az7ko"
-{
-  "customer_name": "John Doe",
-  "order_items": [
-    {
-      "item": "Rice",
-      "quantity": 3
+[
+  {
+    "customer_name": "Chioma",
+    "order_items": [
+      {
+        "item": "Rice",
+        "quantity": 3
+      },
+      {
+        "item": "Noodles",
+        "quantity": 2
+      }
+    ],
+    "details_left": {
+      "delivery_date": "2026-05-24",
+      "payment_status": "Paid",
+      "priority_level": "Medium"
     },
-    {
-      "item": "Noodles",
-      "quantity": 2
+    "details_right": {
+      "customer_phone": null,
+      "delivery_location": "Lekki",
+      "special_instructions": null
     }
-  ],
-  "delivery_location": "Lekki",
-  "payment_status": "Paid"
-}
+  }
+]
 ```
-
 ---
 
 ## Fraud Detection
@@ -193,8 +202,16 @@ Click this link immediately to avoid permanent restriction.
 
 ```json id="jlwmk8"
 {
-  "risk_level": "High Risk",
+  "risk_level": "Scam Likely",
   "scam_type": "Phishing",
+  "red_flags": [
+    "urgent pressure tactics",
+    "threat of account suspension",
+    "request to click a link",
+    "impersonation of service provider"
+  ],
+  "explanation": "The message uses urgent language and threatens account suspension to force the recipient to click a link, a common phishing tactic.",
+  "recommended_action": "Do not click links",
   "confidence_score": 92
 }
 ```
